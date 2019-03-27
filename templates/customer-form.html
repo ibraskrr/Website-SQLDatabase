@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add new customer</title>
+<link rel="stylesheet" media="screen"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+	<body>
+	<center>
+	<h1>Add Customer</h1>
+	</center>
+	<div class="container">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="/">Home</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li><a href="/customer-add/">New customer</a></li>
+		  <li><a href="/ticket-add/">New ticket</a></li>
+		  <li><a href="/ticket-update-add/">Add ticket update</a></li>
+		  <li><a href="/show-open-tickets/">Show open tickets</a></li>
+		  <li><a href="/close-ticket/">Close ticket</a></li>
+		  <li><a href="/ticket-details/">Ticket Details</a></li>      
+		  <li><a href="/show-closed-tickets/">Show closed tickets</a></li>
+		  <li><a href="/delete-customer/">Delete Customer</a></li>   
+		</ul>
+	  </div>
+	  </div>
+	</nav>
+
+
+	<div class="container">
+
+		<div class='row'>
+			<div class='box'>
+				
+				<form method="post" role="form">
+					<div class="form-group">
+						<label for="id">ID :</label> 
+						<input type="text" class="form-control" name="id" placeholder="Enter ID"> 
+						<label for="name">Name:</label>
+						<input type="text" class="form-control" name="name" placeholder="Enter name">
+						<label for="email"> Email:
+						</label> <input type="text"class="form-control" name="email" placeholder="Enter email">				
+					</div>
+				<button type="submit" class="btn btn-default">Add record</button>
+				</form>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='box'>
+				<B>{{ message }}</B>
+			</div>
+		</div>
+			
+		
+
+  
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Display Results</title>
+<link rel="stylesheet" media="screen"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+	<body>
+	<center>
+	<h1> Tickets</h1>
+	</center>
+	<div class="container">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+		<div class="navbar-header">
+		  <a class="navbar-brand" href="/">Home</a>
+		</div>
+		<ul class="nav navbar-nav">
+		  <li><a href="/customer-add/">New customer</a></li>
+		  <li><a href="/ticket-add/">New ticket</a></li>
+		  <li><a href="/ticket-update-add/">Add ticket update</a></li>
+		  <li><a href="/show-open-tickets/">Show open tickets</a></li>
+		  <li><a href="/close-ticket/">Close ticket</a></li>
+		  <li><a href="/ticket-details/">Ticket Details</a></li>      
+		  <li><a href="/show-closed-tickets/">Show closed tickets</a></li>
+		  <li><a href="/delete-customer/">Delete Customer</a></li>   
+		</ul>
+	  </div>
+	  </div>
+	</nav>
+<body>
+	<div class="container">
+		<div class='row'>
+			{% if primary %}
+			    <h2>{{ primary }}</h2>
+			{% endif %}
+			
+			<div class='col-md-12'>
+				<table class='table'>
+				  <thead><tr>
+				    {% for col in columns %}
+				        <th>{{ col }}</th>
+				    {% endfor %}
+				  </tr></thead>
+				  <tbody>
+				  {% for row in results %}
+				    <tr>
+				      {% for col in row %}
+				        <td>{{ col }}</td>
+				      {% endfor %}
+				    </tr>
+				  {% endfor %}
+				  </tbody>
+				</table>
+			</div>
+		</div>
+		<div class='row'>
+			<div class='col-md-12'>
+				<B>{{ message }}</B>
+			</div>
+		</div>
+
+
+</body>
+</html>
